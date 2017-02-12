@@ -38,7 +38,7 @@ There are several challenges in this task:
   - Perhaps process each sentence of the document in parallel with an RNN. This may require adapting the attention mechanism in some way. (Since you will no longer be attending to a position in a sequence, but perhaps to a position in a sequence of sequences.)
 - Summaries often reuse content from the original document. In fact, there is a task called &quot;extractive summarisation&quot; that only lets you reuse existing content (this contrasts with the more general &quot;abstractive summarisation&quot;). Consider augmenting your summarisation model with a &quot;copy mechanism&quot; that decides to copy a word from a position, rather than encoding the word as a vector and re-decoding it.
 
-Machine translation (MT)
+### Machine translation (MT)
 
 Machine translation has been one of the notable successes of deep learning in NLP. The TED corpus has been translated into many languages by a volunteer effort. And TED now holds regional talks in many different languages, many of which are also translated into English. The result is: we have a lot of &quot;in domain&quot; training data to learn how to translate TED talks.
 
