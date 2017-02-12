@@ -59,9 +59,12 @@ How long does it take to read a document? Different speakers speak at different 
 In this task, you will use the timing data from the TED XML transcripts to build a model to predict how long different speakers will take to produce words. Since each speaker will have a different base rate, we will control for that by observing the speaking rate both in the training set and test set.
 
  r = per-character speaking rate of speaker (observed in this case)
+ 
 ![equation](http://www.sciweavers.org/upload/Tex2Img_1486929374/render.png)= context vector at time t ( can be processed by token embedding, bidirectional RNN or convNet)
+
  ![equation](http://www.sciweavers.org/upload/Tex2Img_1486929339/render.png) = predict\_duration ![equation](http://www.sciweavers.org/upload/Tex2Img_1486929419/render.png)  ( in milliseconds? or log milliseconds? Should be positive?)
-![equation](http://www.sciweavers.org/upload/Tex2Img_1486929276/render.png)  (or log \sum exp?)
+ 
+
 ![equation](http://www.sciweavers.org/upload/Tex2Img_1486929466/render.png)   (What loss function is used here? What does the error distribution look like? Is it symmetric? skewed?)
 
 
