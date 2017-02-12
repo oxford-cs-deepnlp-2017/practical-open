@@ -38,7 +38,7 @@ There are several challenges in this task:
   - Perhaps process each sentence of the document in parallel with an RNN. This may require adapting the attention mechanism in some way. (Since you will no longer be attending to a position in a sequence, but perhaps to a position in a sequence of sequences.)
 - Summaries often reuse content from the original document. In fact, there is a task called &quot;extractive summarisation&quot; that only lets you reuse existing content (this contrasts with the more general &quot;abstractive summarisation&quot;). Consider augmenting your summarisation model with a &quot;copy mechanism&quot; that decides to copy a word from a position, rather than encoding the word as a vector and re-decoding it.
 
-### Machine translation (MT)
+###Machine translation (MT)
 
 Machine translation has been one of the notable successes of deep learning in NLP. The TED corpus has been translated into many languages by a volunteer effort. And TED now holds regional talks in many different languages, many of which are also translated into English. The result is: we have a lot of &quot;in domain&quot; training data to learn how to translate TED talks.
 
@@ -58,11 +58,12 @@ How long does it take to read a document? Different speakers speak at different 
 
 In this task, you will use the timing data from the TED XML transcripts to build a model to predict how long different speakers will take to produce words. Since each speaker will have a different base rate, we will control for that by observing the speaking rate both in the training set and test set.
 
- $r$ = per-character speaking rate of speaker (observed in this case)
-$h_t $= context vector at time $t$ ( can be processed by token embedding, bidirectional RNN or convNet)
-$y_t$ = predict\_duration $g(r, h_t)$  ( in milliseconds? or log milliseconds? Should be positive?)
-$y=\sum_t y_t$  (or log \sum exp?)
-$loss = f(y^*, y)$   (What loss function is used here? What does the error distribution look like? Is it symmetric? skewed?)
+ r = per-character speaking rate of speaker (observed in this case)
+![equation](http://www.sciweavers.org/upload/Tex2Img_1486929374/render.png)= context vector at time t ( can be processed by token embedding, bidirectional RNN or convNet)
+ ![equation](http://www.sciweavers.org/upload/Tex2Img_1486929339/render.png) = predict\_duration ![equation](http://www.sciweavers.org/upload/Tex2Img_1486929419/render.png)  ( in milliseconds? or log milliseconds? Should be positive?)
+![equation](http://www.sciweavers.org/upload/Tex2Img_1486929276/render.png)  (or log \sum exp?)
+![equation](http://www.sciweavers.org/upload/Tex2Img_1486929466/render.png)   (What loss function is used here? What does the error distribution look like? Is it symmetric? skewed?)
+
 
 In this task, you will need to:
 
