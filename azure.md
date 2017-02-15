@@ -15,25 +15,23 @@ Each student is given a VM instance with the following specifications:
 
 
 ### Connect to your server
-By this point you should have received an IP and a password in your college email. Using the ip and password provided you can connect to your server using ```
-ssh deepnlp2017@<your server ip>
-```
+By this point you should have received an IP and a password in your college email. Using the ip and password provided you can connect to your server using `ssh deepnlp2017@<your server ip>`
 
 #### Session managment
-```tmux``` allows access multiple separate terminal sessions inside a remote terminal session. Using ```tmux``` you can keep sessions alive in the background (e.g. training your network) even when disconnecting, and reconnect to them the next time you login.
+`tmux` allows access multiple separate terminal sessions inside a remote terminal session. Using ```tmux``` you can keep sessions alive in the background (e.g. training your network) even when disconnecting, and reconnect to them the next time you login.
 Basic shortcuts:
 
 - list sessions
-```tmux ls```
+`tmux ls`
 
 - detach from session
-```ctrl+b - d```
+`ctrl+b - d`
 
 - change name of session
-```ctrl+b - shift+4```
+`ctrl+b - shift+4`
 
 - reconnect to session
-```tmux attach -t <session_name>```
+`tmux attach -t <session_name>`
 
 
 
@@ -45,7 +43,7 @@ sudo apt-get update
 sudo apt-get install cuda
 ```
 
-To confirm successful installation run ```nvidia-smi```.
+To confirm successful installation run `nvidia-smi`.
 #### Install CuDNN 5.1
 
 ```
@@ -64,4 +62,4 @@ You are ready to install python and your favourite framework:
 - CNTK
 
 #### Support
-For further information for Univerisity of Oxford students please contact ```iassael@gmail.com```.
+For further information for Univerisity of Oxford students please contact `iassael@gmail.com`.
