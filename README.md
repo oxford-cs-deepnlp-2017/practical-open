@@ -3,6 +3,13 @@
 
 The first three practicals covered a variety of introductory topics in Deep Learning for NLP. For the remainder of the term, you can select from among the following projects and explore them according to your interests. Treat the following project descriptions as suggested starting points, but feel free to take any of these ideas in a different direction if you feel inspired to. The practical sessions offer you an opportunity to pursue such ideas while making use of the support and expertise of your practical demonstrators.
 
+## Microsoft Azure Sponsorship
+
+<img src="doc/azure.svg" width="50%" />
+
+We would like to thank Microsoft Azure Sponsorship 2 for their generous donation of GPU computational resources for this course, as well as, Michael Thomas, Andrew Webber and Lee Stott for their precious help.
+For more information setting up your GPU VM: [Azure Setup Guide](azure.md)
+
 ##Conditional language modeling
 
 ###Conditioning on the topic set and generating a TED talk
