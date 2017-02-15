@@ -1,6 +1,6 @@
 # Microsoft Azure Sponsorship
 
-<img src="https://raw.githubusercontent.com/oxford-cs-deepnlp-2017/practical-open/master/doc/azure.svg" width="50%" />
+<img src="https://rawgit.com/oxford-cs-deepnlp-2017/practical-open/master/doc/azure.svg" width="50%" />
 
 We would like to thank Microsoft Azure Sponsorship 2 for their generous donation of GPU computational resources for this course, as well as, Michael Thomas, Andrew Webber and Lee Stott for their precious help.
 
