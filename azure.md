@@ -36,23 +36,35 @@ Basic shortcuts:
 
 
 #### Install Cuda 8.0
+
 ```
-wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
-sudo dpkg -i cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
-sudo apt-get update
-sudo apt-get install cuda
+cd ~
+wget https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda_8.0.61_375.26_linux-run
+chmod +x cuda_8.0.61_375.26_linux-run
+sudo ./cuda_8.0.61_375.26_linux-run
 ```
 
-To confirm successful installation run `nvidia-smi`.
+Answer the questions with y(es) or enter (default settings) for paths. To confirm successful installation run `nvidia-smi`.
+
 #### Install CuDNN 5.1
 
 ```
-wget http://developer.download.nvidia.com/compute/redist/cudnn/v5.1/cudnn-8.0-linux-x64-v5.1.tgz && \
-sudo tar -xzf cudnn-8.0-linux-x64-v5.1.tgz -C /usr/local && \
-rm cudnn-8.0-linux-x64-v5.1.tgz && \
+cd ~
+wget http://developer.download.nvidia.com/compute/redist/cudnn/v5.1/cudnn-8.0-linux-x64-v5.1.tgz
+sudo tar -xzf cudnn-8.0-linux-x64-v5.1.tgz -C /usr/local
+rm cudnn-8.0-linux-x64-v5.1.tgz
 sudo ldconfig
 ```
 
+#### Add in references
+append the following lines to your `~/.bashrc`. You can edit it with `nano ~/.bashrc`.
+
+```
+export CUDA_HOME=/usr/local/cuda-8.0
+export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+```
 
 #### Install framework
 You are ready to install python and your favourite framework:
@@ -60,6 +72,11 @@ You are ready to install python and your favourite framework:
 - PyTorch
 - Tensorflow
 - CNTK
+
+Instructions of how to set up an iPython notebook server remotely can be found [here](https://ipython.org/ipython-doc/3/notebook/public_server.html).
+
+#### Troubleshooting
+- ensure uninstallation of previous NVIDIA drivers `sudo apt-get remove --purge nvidia-*`
 
 #### Support
 For further information for Univerisity of Oxford students please contact `iassael@gmail.com`.
