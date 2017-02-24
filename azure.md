@@ -38,6 +38,7 @@ Basic shortcuts:
 #### Install Cuda 8.0
 
 ```
+sudo apt-get install build-essential
 cd ~
 wget https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda_8.0.61_375.26_linux-run
 chmod +x cuda_8.0.61_375.26_linux-run
