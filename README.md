@@ -12,9 +12,9 @@ For more information setting up your GPU VM: [Azure Setup Guide](azure.md)
 
 ##Conditional language modeling
 
-###Conditioning on the topic set and generating a TED talk
+###Conditioning on the topic set and generating text
 
-This is the inverse of the problem considered in Practical 2/3: rather than conditioning on a talk, and predicting its labels, you should condition on an embedding of the label set and generate a TED talk.
+This is the inverse of the problem considered in Practical 2/3: rather than conditioning on a talk, and predicting its labels, you should condition on an embedding of the label set and generate a TED talk. Because the TED dataset is limited in terms of size, the (partial) [Wikipedia dumps](https://dumps.wikimedia.org/backup-index.html) could be considered as an alternative choice.
 
 This can be summarized by the very simple stochastic program:
 
